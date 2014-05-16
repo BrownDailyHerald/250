@@ -1,0 +1,58 @@
+body {
+  background: #f3f3f3;
+}
+header {
+  font-size: 24px;
+  text-align: center;
+}
+
+header > h1 {
+  margin: 0;
+}
+
+header > span {
+  font-size: 12px;
+  opacity: 0.5;
+}
+
+#content {
+  margin: 20px 50px 20px 50px;
+  padding-bottom: 50px;
+}
+
+#content > p {
+  font-size: 20px;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 50px;
+  width: 100%;
+  background-color: #d3d3d3;
+}
+
+footer > ul > li {
+  display: inline;
+}
+
+footer > ul > li#About {
+  float: left;
+  text-align: center;
+  width: 33.33%;
+}
+
+footer > ul > li#Print {
+  float: left;
+  text-align: center;
+  width: 33.33%;
+}
+
+footer > ul > li#Archives {
+  float: right;
+  text-align: center;
+  width: 33.33%;
+}

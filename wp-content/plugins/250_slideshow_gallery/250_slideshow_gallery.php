@@ -43,6 +43,7 @@ function slideshow_gallery($output = '', $atts, $content = false, $tag = false )
 	}
 
   $left = 0;
+  $i = 0;
 
   foreach ( $attachments as $id => $attachment ) {
 		if ( ! empty( $link ) && 'file' === $link )
@@ -54,7 +55,7 @@ function slideshow_gallery($output = '', $atts, $content = false, $tag = false )
 
     // now time for OUR style stuff
 
-		$output .= "<div class='slide' style='left: ".$left."px;'>";
+		$output .= "<div class='slide' style='left: ".$left."px;' id='".($i++)."'>";
 		$output .= $image_output;
 		if ( trim($attachment->post_excerpt) ) {
 			$output .= "
@@ -66,14 +67,27 @@ function slideshow_gallery($output = '', $atts, $content = false, $tag = false )
     $left += $w;
 	}
   $figcap_width = $w - 20; // for padding
+  $control_width = count($attachments)*20 + 50;
 
-  $output .= <<<JS
+  /* navigation */
+  $output .= '<div class="gallery-nav"><div class="controls" style="width: '.$control_width.'px;">';
+  $output .= '<img src="'.plugins_url( 'triangle_left.png' , __FILE__ ).'" style="float: left; " id="l" />';
+  for ($i = 0; $i < count($attachments); $i++) {
+    $output .= '<div class="bubble" id="'.$i.'"></div>';
+  }
+  $output .= '<img src="'.plugins_url( 'triangle_right.png' , __FILE__ ).'" style="float: left; margin-left: 10px;" id="r" />';
+  $output .= '</div></div>';
+
+  $output .= <<<HTML
 <script type="text/javascript">
 (function($) {  
-  slideshow({
+  var ss = slideshow({
     element: '.gallery',
     width: {$w},
     delay: 8000,
+  });
+  $('.gallery').find('img').click(function() {
+    (this.id == 'r' ? ss.next : ss.prev)();
   });
 })(jQuery);
 </script>
@@ -84,8 +98,14 @@ function slideshow_gallery($output = '', $atts, $content = false, $tag = false )
 figcaption {
   width: {$figcap_width}px;
 }
+.gallery-nav {
+  width: {$figcap_width}px;
+}
 </style>
-JS;
+HTML;
+
+  /* end gallery div */
+  $output .= '</div>';
 
   return $output;
   die;

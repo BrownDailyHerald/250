@@ -116,3 +116,39 @@ figcaption h1 {
 .category li {
   font-size: 20px;
 }
+
+.gallery-nav .controls {
+  margin: auto;
+  overflow: auto;
+}
+
+.gallery-nav {
+  overflow: auto;
+  width: {$figcap_width}px;
+  padding: 10px;
+  margin: auto;
+  position: absolute;
+  z-index: 100000;
+  height: 13px;
+  overflow: hidden;
+  bottom: 0px;
+  background-color: rgba(0, 0, 0, 0.75);
+  text-align: center;
+}
+.bubble {
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  background-color: rgba(0,0,0,0);
+  float: left;
+  margin-left: 10px;
+  cursor: default;
+  transition: background-color linear 0.4s;
+}
+.bubble.active {
+  background-color: rgba(255,255,255,0.3);
+}
+.gallery-nav img {
+  cursor: pointer;
+}

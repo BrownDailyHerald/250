@@ -16,6 +16,8 @@
 	<script src="<?php echo get_template_directory_uri(); ?>/js/html5.js"></script>
 	<![endif]-->
 	<?php wp_head(); ?>
+  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css" type="text/css" />
+  <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/jquery.min.js"></script>
 </head>
 
 <body <?php body_class(); ?>>

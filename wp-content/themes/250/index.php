@@ -1,23 +1,40 @@
 <?php
 
-get_header(); ?>
+get_header();
+
+function render_category($slug = null) {
+  if (empty($slug)) return array();
+  $query = new WP_Query( 'category_name='.$slug );
+  echo '<ul>';
+  while ( $query->have_posts() ) {
+	  $query->the_post();
+	  echo '<li>' . get_the_title() . '</li>';
+  }
+  echo '</ul>';
+  return $query;
+}
+
+?>
 
 <div class="catcontain">
   <div class="category" style="background-color: rgba(255,0,0,0.4);">
-    <div class="contain"><b>The People</b></div>
+    <div class="title"><b>The People</b></div>
     <div class="photo">
+      <?php render_category('the-people'); ?>
       <img src="http://placehold.it/1300x600" alt="">
     </div>
   </div>
   <div class="category" style="background-color: rgba(0,255,0,0.4); margin: auto; z-index: 2000;">
-    <div class="contain"><b>The Places</b></div>
+    <div class="title"><b>The Place</b></div>
     <div class="photo">
+      <?php render_category('the-place'); ?>
       <img src="http://placehold.it/1300x600" alt="">
     </div>
   </div>
   <div class="category" style="background-color: rgba(0,0,255,0.4);">
-    <div class="contain"><b>The Moment</b></div>
+    <div class="title"><b>The Moment</b></div>
     <div class="photo">
+      <?php render_category('the-moment'); ?>
       <img src="http://placehold.it/1300x600" alt="">
     </div>
   </div>

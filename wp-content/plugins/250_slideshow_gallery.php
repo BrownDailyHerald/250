@@ -59,7 +59,7 @@ function slideshow_gallery($output = '', $atts, $content = false, $tag = false )
 		if ( trim($attachment->post_excerpt) ) {
 			$output .= "
 				<figcaption class='wp-caption-text gallery-caption'>
-				" . wptexturize($attachment->post_excerpt) . "
+        <h1>" . $attachment->post_title . "</h1>" . wptexturize($attachment->post_excerpt) . "
 				</figcaption>";
 		}
 		$output .= "</div>";

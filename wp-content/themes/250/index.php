@@ -42,7 +42,7 @@ function render_category($slug = null) {
 <script type='text/javascript'>
   var low_opc = 0.4;
   var min_width = "5%";
-  var min_height = '200px';
+  var min_height = $('.category').first().css('height');
   var exp_height = '600px';
   $('.category').hover(function() {
     $(this).stop().animate({width: '90%', height: exp_height, opacity: '1.0'});

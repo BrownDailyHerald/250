@@ -18,9 +18,10 @@ body {
 .category {
   width: 33.33%; 
   float: left;
-  height: 200px;
+  height: 90px;
   overflow: hidden;
   cursor: default;
+  white-space: nowrap;
 }
 .category:first-child {
   float: left;

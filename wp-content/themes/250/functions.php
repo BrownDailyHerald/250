@@ -1,5 +1,11 @@
 <?php
 
+if ( ! function_exists( 'twofifty_title' ) ) :
+function twofifty_title( $title = '' ) {
+  return $title . get_bloginfo('name');
+}
+endif;
+
 if ( ! function_exists( 'twofifty_setup' ) ) :
 
 function twofifty_setup() {
@@ -31,6 +37,9 @@ function twofifty_setup() {
 
 	// This theme uses its own gallery styles.
 	add_filter( 'use_default_gallery_style', '__return_false' );
+
+  // Make sure blog title goes in page title
+  add_filter( 'wp_title', 'twofifty_title', 10, 1 );
 }
 endif; // twofifty_setup
 add_action( 'after_setup_theme', 'twofifty_setup' );

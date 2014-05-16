@@ -13,20 +13,8 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
   <header class="entry-header">
     <h1><?php the_title( ); ?></h1>
-    <span> By: Cody Ma </span>
-    /
-    <span> Published: 5/1/2014 </span>
+    <span> By: <?php the_author(); ?> </span>
   </header>
-
-	<header class="entry-header">
-		<?php if ( in_array( 'category', get_object_taxonomies( get_post_type() ) ) ) : ?>
-		<div class="entry-meta">
-			<span class="cat-links"><?php echo get_the_category_list( _x( ', ', 'Used between list items, there is a space after the comma.', '250' ) ); ?></span>
-		</div>
-		<?php
-			endif;
-    ?>
-	</header><!-- .entry-header -->
 
 	<?php if ( is_search() ) : ?>
 	<div class="entry-summary">

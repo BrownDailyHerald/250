@@ -67,7 +67,7 @@ function slideshow_gallery($output = '', $atts, $content = false, $tag = false )
     $left += $w;
 	}
   $figcap_width = $w - 20; // for padding
-  $control_width = count($attachments)*20 + 50;
+  $control_width = count($attachments)*22 + 50;
 
   /* navigation */
   $output .= '<div class="gallery-nav"><div class="controls" style="width: '.$control_width.'px;">';

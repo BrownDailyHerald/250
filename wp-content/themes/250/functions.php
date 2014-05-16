@@ -32,7 +32,7 @@ function twofifty_setup() {
 	// This theme uses its own gallery styles.
 	add_filter( 'use_default_gallery_style', '__return_false' );
 }
-endif; // twentyfourteen_setup
+endif; // twofifty_setup
 add_action( 'after_setup_theme', 'twofifty_setup' );
 
 /**
@@ -50,5 +50,6 @@ function twofifty_scripts() {
 
   // jquery
   wp_enqueue_script( 'jquery', get_template_directory_uri() . '/jquery.min.js' );
+  wp_enqueue_script( 'slideshow', get_template_directory_uri() . '/slideshow.js', 'jquery' );
 }
 add_action( 'wp_enqueue_scripts', 'twofifty_scripts' );

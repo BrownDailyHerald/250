@@ -75,3 +75,26 @@ footer > ul > li#Archives {
   width: 33.33%;
 }
 
+.gallery {
+  min-height: 500px;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid black;
+}
+
+.slide {
+  position: absolute;
+  top: 0px;
+  text-align: center;
+  transition: left ease 1s;
+}
+
+figcaption {
+  position: absolute;
+  text-align: center;
+  top: 0px;
+  padding: 10px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.75);
+}

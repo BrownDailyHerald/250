@@ -46,23 +46,18 @@ function slideshow_gallery($output = '', $atts, $content = false, $tag = false )
   $i = 0;
 
   foreach ( $attachments as $id => $attachment ) {
-		if ( ! empty( $link ) && 'file' === $link )
-			$image_output = wp_get_attachment_link( $id, $size, false, false );
-		elseif ( ! empty( $link ) && 'none' === $link )
 			$image_output = wp_get_attachment_image( $id, $size, false );
-		else
-			$image_output = wp_get_attachment_link( $id, $size, true, false );
 
     // now time for OUR style stuff
 
 		$output .= "<div class='slide' style='left: ".$left."px;' id='".($i++)."'>";
-		$output .= $image_output;
 		if ( trim($attachment->post_excerpt) ) {
 			$output .= "
 				<figcaption class='wp-caption-text gallery-caption'>
         <h1>" . $attachment->post_title . "</h1>" . wptexturize($attachment->post_excerpt) . "
 				</figcaption>";
 		}
+    $output .= $image_output;
 		$output .= "</div>";
     $left += $w;
 	}
@@ -71,7 +66,7 @@ function slideshow_gallery($output = '', $atts, $content = false, $tag = false )
 
   /* navigation */
   $output .= '<div class="gallery-nav"><div class="controls" style="width: '.$control_width.'px;">';
-  $output .= '<img src="'.plugins_url( 'triangle_left.png' , __FILE__ ).'" style="float: left; " id="l" />';
+  $output .= '<img src="'.plugins_url( 'triangle_left.png' , __FILE__ ).'" style="float: left;" id="l" />';
   for ($i = 0; $i < count($attachments); $i++) {
     $output .= '<div class="bubble" id="'.$i.'"></div>';
   }

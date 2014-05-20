@@ -16,7 +16,7 @@ body {
   position: relative;
 }
 .category {
-  width: 33.33%; 
+  width: 33.33%;
   float: left;
   height: 90px;
   overflow: hidden;
@@ -36,12 +36,15 @@ body {
 }
 .category > div.title {
   padding: 10px;
-  padding-top: 15px;
-  font-family: sans-serif;
+  padding-top: 20px;
+  font-family: Libre Baskerville, sans-serif;
   text-align: center;
   font-size: 3em;
 }
-.category > div.photo {
+.category > div.photo > img {
+  width: 100%;
+}
+.category > img {
 }
 footer {
   position: absolute;

@@ -16,26 +16,28 @@ function render_category($slug = null) {
 
 ?>
 
+<link href='http://fonts.googleapis.com/css?family=Libre+Baskerville' rel='stylesheet' type='text/css'>
+
 <div class="catcontain">
-  <div class="category" style="background-color: rgba(255,0,0,0.4);">
-    <div class="title"><b>The People</b></div>
+  <div class="category" style="background-color: #dd1e36;">
+    <div class="title" style="color: #ffffff"><b>The People</b></div>
     <div class="photo">
       <?php render_category('the-people'); ?>
-      <img src="http://placehold.it/1300x600" alt="">
+      <img src="http://placekitten.com/1300/600" alt="">
     </div>
   </div>
-  <div class="category" style="background-color: rgba(0,255,0,0.4); margin: auto; z-index: 2000;">
-    <div class="title"><b>The Place</b></div>
+  <div class="category" style="background-color: #3a1e1a; margin: auto; z-index: 2000;">
+    <div class="title" style="color: #ffffff"><b>The Place</b></div>
     <div class="photo">
       <?php render_category('the-place'); ?>
-      <img src="http://placehold.it/1300x600" alt="">
+      <img src="http://placekitten.com/1300/600" alt="">
     </div>
   </div>
-  <div class="category" style="background-color: rgba(0,0,255,0.4);">
-    <div class="title"><b>The Moment</b></div>
+  <div class="category" style="background-color: #dd1e36">
+    <div class="title" style="color: #ffffff"><b>The Moment</b></div>
     <div class="photo">
       <?php render_category('the-moment'); ?>
-      <img src="http://placehold.it/1300x600" alt="">
+      <img src="http://placekitten.com/1300/600" alt="">
     </div>
   </div>
 </div>

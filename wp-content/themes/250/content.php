@@ -8,12 +8,15 @@
  * @subpackage Twenty_Fourteen
  * @since Twenty Fourteen 1.0
  */
+
+$custom_author = get_post_meta( get_the_ID(), '_custom_author', true );
+if (!empty($custom_author)) trim($custom_author);
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
   <header class="entry-header">
     <h1><?php the_title( ); ?></h1>
-    <span> By: <?php the_author(); ?> </span>
+    <span> By: <?php if (empty($custom_author)) { the_author(); } else { echo $custom_author; } ?> </span>
   </header>
 
 	<?php if ( is_search() ) : ?>

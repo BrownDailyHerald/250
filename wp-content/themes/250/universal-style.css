@@ -1,11 +1,16 @@
 header.banner {
-  width: 100%;
   padding: 10px;
   padding-left: 50px;
   background-color: rgb(58, 30, 26);
+}
+header.banner > div {
+  width: 100%;
   color: white;
   font-family: serif;
 }
 header.banner a {
   color: white;
+}
+footer {
+  width: 100%;
 }

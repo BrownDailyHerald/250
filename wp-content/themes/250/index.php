@@ -15,7 +15,12 @@ function render_category($slug = null) {
 }
 
 ?>
-
+<style type="text/css">
+body {
+  background: url(<?php echo get_template_directory_uri() . '/img/bg_fw.jpg'; ?>);
+  background-size: 100% auto;
+}
+</style>
 <link href='http://fonts.googleapis.com/css?family=Libre+Baskerville' rel='stylesheet' type='text/css'>
 
 <div class="catcontain">
@@ -86,7 +91,6 @@ function render_category($slug = null) {
     $('.category').not($(this)).stop().animate({width: '33.33%', height: min_height, opacity: '1.0'});
   });
 </script>
-
 <?php
 get_sidebar();
 get_footer();

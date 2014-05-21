@@ -4,7 +4,47 @@ Author: webstaff
 Description: The 250th site's theme
 Version: 0.1
 */
-
+a {
+  color: #000;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+.archive {
+  background-color: #fff;
+  color: #000;
+  float: left;
+  font-family: Libre Baskerville, sans-serif;
+  font-size: 16px;
+  height: 470px;
+  margin: 20px;
+  margin-right: 0px;
+  overflow-y: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 20%;
+  word-wrap: break-word;
+}
+.archive h3 {
+  margin: 0px;
+}
+.archive ul {
+  margin: 5px;
+  margin-bottom: 20px;
+}
+.archive ul li {
+  font-size: 14px;
+  margin: 3px;
+  margin-left: -20px;
+}
+/*.archive ul li a {*/
+  /*color: #000;*/
+  /*text-decoration: none;*/
+/*}*/
+/*.archive ul li a:hover {*/
+  /*text-decoration: underline;*/
+/*}*/
 body {
 	padding: 0;
 	margin: 0;
@@ -16,6 +56,7 @@ body {
   position: relative;
 }
 .category {
+  clear:bottom;
   width: 33.33%;
   float: left;
   height: 90px;
@@ -35,8 +76,7 @@ body {
   right: 0px;
 }
 .category > div.title {
-  padding: 10px;
-  padding-top: 20px;
+  padding: 20px 10px 10px;
   font-family: Libre Baskerville, sans-serif;
   text-align: center;
   font-size: 3em;
@@ -44,7 +84,29 @@ body {
 .category > div.photo > img {
   width: 100%;
 }
-.category > img {
+.content {
+  background-color: #fff;
+  float: right;
+  font-family: Libre Baskerville, sans-serif;
+  height: 470px;
+  margin: 20px;
+  margin-left: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 65%;
+}
+.content ul {
+}
+.content ul li {
+  padding: 5px 0px;
+}
+.divider {
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  height: 450px;
+  left: 25%;
+  position: absolute;
+  width: 1px;
 }
 footer {
   position: absolute;

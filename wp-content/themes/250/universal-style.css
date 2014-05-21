@@ -1,0 +1,11 @@
+header.banner {
+  width: 100%;
+  padding: 10px;
+  padding-left: 50px;
+  background-color: rgb(58, 30, 26);
+  color: white;
+  font-family: serif;
+}
+header.banner a {
+  color: white;
+}

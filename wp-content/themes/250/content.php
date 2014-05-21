@@ -12,6 +12,9 @@
 $custom_author = get_post_meta( get_the_ID(), '_custom_author', true );
 if (!empty($custom_author)) trim($custom_author);
 ?>
+<header class="banner">
+<a href="<?php echo get_site_url(); ?>"><?php echo get_bloginfo('name'); ?></a>
+</header>
 <div id="main" class="site-main">
   <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <header class="entry-header">

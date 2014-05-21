@@ -56,6 +56,8 @@ function twofifty_scripts() {
   } else {
     wp_enqueue_style( '250-default-style', get_template_directory_uri() . '/article-style.css' );
   }
+  // universal style
+  wp_enqueue_style( '250-universal-style', get_template_directory_uri() . '/universal-style.css' );
 
   // jquery
   wp_enqueue_script( 'jquery', get_template_directory_uri() . '/jquery.min.js' );

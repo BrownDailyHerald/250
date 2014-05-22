@@ -8,7 +8,7 @@ function render_category($slug = null) {
   echo '<ul>';
   while ( $query->have_posts() ) {
 	  $query->the_post();
-	  echo '<li>' . get_the_title() . '</li>';
+	  echo '<li> <a href="'.get_the_permalink().'">' . get_the_title() . '</a></li>';
   }
   echo '</ul>';
   return $query;
@@ -27,7 +27,7 @@ body {
   <div class="category" style="background-color: #dd1e36;">
     <div class="title" style="color: #ffffff"><b>The People</b></div>
     <div class="archive"></div>
-    <div class="photo">
+    <div class="content">
       <?php render_category('the-people'); ?>
     </div>
   </div>
@@ -52,19 +52,8 @@ body {
           <li> <a href="#"> Fuck 2 </a> </li>
         </ul>
       </div>
-      <div class="content">
-        <h1> <u> Shit load of links...? </u> </h1>
-        <ul>
-          <li> <a href="#"> Fuck 1 </a> </li>
-          <li> <a href="#"> Fuck 2 </a> </li>
-          <li> <a href="#"> Fuck 3 </a> </li>
-          <li> <a href="#"> Fuck 4 </a> </li>
-          <li> <a href="#"> Fuck 5 </a> </li>
-          <li> <a href="#"> Fuck 6 </a> </li>
-        </ul>
-      </div>
     </div>
-    <div class="photo">
+    <div class="content">
       <?php render_category('the-place'); ?>
     </div>
   </div>

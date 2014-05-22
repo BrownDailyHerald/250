@@ -8,6 +8,15 @@
  */
 
 get_header(); ?>
+<style type="text/css">
+.site-main {
+  padding-top: 0 !important;
+}
+.page-header {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+</style>
 <header class="banner">
   <div style="overflow: auto;">
     <a href="<?php echo get_site_url(); ?>"><?php echo get_bloginfo('name'); ?></a>

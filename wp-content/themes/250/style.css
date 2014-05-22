@@ -32,6 +32,9 @@ a:hover {
 .content-container {
   background-color: #d3d3d3;
   display: inline-block;
+  position: absolute;
+  top: 120px;
+  left: 0px;
   font-family: Libre Baskerville, sans-serif;
   margin: 0 5%;
   width: 90%;

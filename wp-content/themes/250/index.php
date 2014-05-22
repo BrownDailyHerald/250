@@ -66,12 +66,12 @@ body {
   $('.category').hover(function() {
     $(this).stop().animate({width: '90%', height: exp_height, opacity: '1.0'});
     $('.category').not($(this)).stop().animate({width: min_width, height: min_height, opacity: low_opc});
-    $('.content-container').animate({opacity: low_opc});
+    $('.content-container').stop().animate({opacity: low_opc});
 
   }, function() {
     $(this).stop().animate({width: '33.33%', height: min_height, opacity: '1.0'});
     $('.category').not($(this)).stop().animate({width: '33.33%', height: min_height, opacity: '1.0'});
-    $('.content-container').animate({opacity: '1.0'});
+    $('.content-container').stop().animate({opacity: '1.0'});
   });
 </script>
 <?php

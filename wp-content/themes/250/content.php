@@ -11,6 +11,8 @@
 
 $custom_author = get_post_meta( get_the_ID(), '_custom_author', true );
 if (!empty($custom_author)) trim($custom_author);
+
+if ( is_single() ): // banner should only show up on its own page
 ?>
 <header class="banner">
   <div style="overflow: auto;">
@@ -18,6 +20,7 @@ if (!empty($custom_author)) trim($custom_author);
     <div style="float: right; font-size: 12px; margin-top: 10px; margin-right: 20px;">by Joe Stein and Cody Ma</div>
   </div>
 </header>
+<?php endif; ?>
 <div id="main" class="site-main">
   <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <header class="entry-header">

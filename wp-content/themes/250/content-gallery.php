@@ -6,6 +6,8 @@
  * @subpackage Twenty_Fourteen
  * @since Twenty Fourteen 1.0
  */
+
+if ( is_single() ): // banner should only show up on its own page
 ?>
 <header class="banner">
   <div style="overflow: auto;">
@@ -13,6 +15,7 @@
     <div style="float: right; font-size: 12px; margin-top: 10px; margin-right: 20px;">by Joe Stein and Cody Ma</div>
   </div>
 </header>
+<?php endif; ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> style="margin-top: 30px;">
 
 	<header class="entry-header">
@@ -21,14 +24,16 @@
 			if ( is_single() ) :
 				the_title( '<h1 class="entry-title">', '</h1>' );
 			else :
-				the_title( '<h1 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h1>' );
+				the_title( '<h1 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', ' [gallery]</a></h1>' );
 			endif;
 		?>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
 		<?php
+      if ( is_single() ):
 			the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'twentyfourteen' ) );
+      endif;
 			wp_link_pages( array(
 				'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'twentyfourteen' ) . '</span>',
 				'after'       => '</div>',

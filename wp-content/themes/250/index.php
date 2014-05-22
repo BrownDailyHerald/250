@@ -26,43 +26,35 @@ body {
 <div class="catcontain">
   <div class="category" style="background-color: #dd1e36;">
     <div class="title" style="color: #ffffff"><b>The People</b></div>
-    <div class="archive"></div>
-    <div class="content">
-      <?php render_category('the-people'); ?>
-    </div>
+    <?php render_category('the-people'); ?>
   </div>
   <div class="category" style="background-color: #3a1e1a; margin: auto;">
     <div class="title" style="color: #ffffff"><b>The Place</b></div>
-    <div class="content-container">
-      <div class="archive">
-        <h1> <u> Archives </u></h1>
-        <h3> Announcements </h3>
-        <ul>
-          <li> <a href="#"> Article 1 </a> </li>
-          <li> <a href="#"> Article 2 </a> </li>
-        </ul>
-        <h3> Presidency </h3>
-        <ul>
-          <li> <a href="#"> Fuck 1 </a> </li>
-          <li> <a href="#"> Fuck 2 </a> </li>
-        </ul>
-        <h3> Deaths </h3>
-        <ul>
-          <li> <a href="#"> Fuck 1 </a> </li>
-          <li> <a href="#"> Fuck 2 </a> </li>
-        </ul>
-      </div>
-    </div>
-    <div class="content">
-      <?php render_category('the-place'); ?>
-    </div>
+    <?php render_category('the-place'); ?>
   </div>
   <div class="category" style="background-color: #dd1e36">
     <div class="title" style="color: #ffffff"><b>The Moment</b></div>
-    <div class="archive"></div>
     <div class="photo">
       <?php render_category('the-moment'); ?>
     </div>
+  </div>
+</div>
+
+<div class="content-container">
+  <div class="archive">
+    <h1> Articles </h1>
+    <h3> Section 1</h3>
+    <ul>
+      <li><a href="#"> Fuck 1 </a> </li>
+      <li><a href="#"> Fuck 2 </a> </li>
+    </ul>
+  </div>
+  <div class="content">
+    <h1> Main Stuff </h1>
+    <ul>
+      <li> <a href="#"> Link 1 </a> </li>
+      <li> <a href="#"> Link 2 </a> </li>
+  </ul>
   </div>
 </div>
 
@@ -74,10 +66,12 @@ body {
   $('.category').hover(function() {
     $(this).stop().animate({width: '90%', height: exp_height, opacity: '1.0'});
     $('.category').not($(this)).stop().animate({width: min_width, height: min_height, opacity: low_opc});
+    $('.content-container').animate({opacity: low_opc});
 
   }, function() {
     $(this).stop().animate({width: '33.33%', height: min_height, opacity: '1.0'});
     $('.category').not($(this)).stop().animate({width: '33.33%', height: min_height, opacity: '1.0'});
+    $('.content-container').animate({opacity: '1.0'});
   });
 </script>
 <?php

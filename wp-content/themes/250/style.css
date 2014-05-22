@@ -13,38 +13,30 @@ a:hover {
 }
 .archive {
   background-color: #fff;
-  color: #000;
   float: left;
-  font-family: Libre Baskerville, sans-serif;
-  font-size: 16px;
-  height: 470px;
-  margin: 20px;
-  margin-right: 0px;
-  overflow-y: auto;
-  padding-left: 20px;
-  padding-right: 20px;
+  height: 100%;
+  padding: 0px 30px;
   width: 20%;
-  word-wrap: break-word;
-}
-.archive h3 {
-  margin: 0px;
 }
 .archive ul {
-  margin: 5px;
-  margin-bottom: 20px;
+  list-style: none;
 }
-.archive ul li {
-  font-size: 14px;
-  margin: 3px;
-  margin-left: -20px;
+.content {
+  float: left;
+  padding-left: 20px;
+  width: 70%;
 }
-/*.archive ul li a {*/
-  /*color: #000;*/
-  /*text-decoration: none;*/
-/*}*/
-/*.archive ul li a:hover {*/
-  /*text-decoration: underline;*/
-/*}*/
+.content ul {
+  list-style: none;
+}
+.content-container {
+  background-color: #d3d3d3;
+  display: inline-block;
+  font-family: Libre Baskerville, sans-serif;
+  margin: 0 5%;
+  width: 90%;
+  z-index: -10000;
+}
 body {
 	padding: 0;
 	margin: 0;
@@ -84,22 +76,22 @@ body {
 .category > div.photo > img {
   width: 100%;
 }
-.content {
-  background-color: #fff;
-  float: right;
-  font-family: Libre Baskerville, sans-serif;
-  height: 470px;
-  margin: 20px;
-  margin-left: 0px;
-  padding-left: 20px;
-  padding-right: 20px;
-  width: 65%;
-}
-.content ul {
-}
-.content ul li {
-  padding: 5px 0px;
-}
+/*.links {*/
+  /*background-color: #fff;*/
+  /*float: right;*/
+  /*font-family: Libre Baskerville, sans-serif;*/
+  /*height: 470px;*/
+  /*margin: 20px;*/
+  /*margin-left: 0px;*/
+  /*padding-left: 20px;*/
+  /*padding-right: 20px;*/
+  /*width: 65%;*/
+/*}*/
+/*.links ul {*/
+/*}*/
+/*.links ul li {*/
+  /*padding: 5px 0px;*/
+/*}*/
 .divider {
   border-left: 1px solid black;
   border-right: 1px solid black;

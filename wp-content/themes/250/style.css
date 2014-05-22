@@ -108,36 +108,6 @@ body {
   position: absolute;
   width: 1px;
 }
-footer {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 50px;
-  width: 100%;
-  background-color: #d3d3d3;
-}
-
-footer > ul > li {
-  display: inline;
-}
-
-footer > ul > li#About {
-  float: left;
-  text-align: center;
-  width: 33.33%;
-}
-
-footer > ul > li#Print {
-  float: left;
-  text-align: center;
-  width: 33.33%;
-}
-
-footer > ul > li#Archives {
-  float: right;
-  text-align: center;
-  width: 33.33%;
-}
 
 .entry-header {
   margin-bottom: 20px;

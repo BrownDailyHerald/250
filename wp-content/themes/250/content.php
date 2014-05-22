@@ -13,7 +13,10 @@ $custom_author = get_post_meta( get_the_ID(), '_custom_author', true );
 if (!empty($custom_author)) trim($custom_author);
 ?>
 <header class="banner">
-<a href="<?php echo get_site_url(); ?>"><?php echo get_bloginfo('name'); ?></a>
+  <div style="overflow: auto;">
+    <a href="<?php echo get_site_url(); ?>"><?php echo get_bloginfo('name'); ?></a>
+    <div style="float: right; font-size: 12px; margin-top: 10px; margin-right: 20px;">by Joe Stein and Cody Ma</div>
+  </div>
 </header>
 <div id="main" class="site-main">
   <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -22,7 +25,7 @@ if (!empty($custom_author)) trim($custom_author);
       <div class="entry-meta">
         <span class="byline">
           <span class="author vcard">
-            <a class="url fn n" rel="author"><?php if (empty($custom_author)) { the_author(); } else { echo $custom_author; } ?></a>
+            <a class="url fn n" rel="author">By: <?php if (empty($custom_author)) { the_author(); } else { echo $custom_author; } ?></a>
           </span>
         </span>
       </div>
@@ -45,7 +48,23 @@ if (!empty($custom_author)) trim($custom_author);
 		  ?>
 	  </div><!-- .entry-content -->
 	  <?php endif; ?>
-
-	  <?php the_tags( '<footer class="entry-meta"><span class="tag-links">', '', '</span></footer>' ); ?>
+<?php
+    $tags = get_the_tags();
+    if ( ! empty( $tags ) ) :
+?>
+    <footer class="entry-meta">
+      <span class="tag-links">
+<?php
+      $tag_html = array();
+      foreach ( $tags as $tag ) {
+        $tag_html[] = $tag->name;
+      }
+      echo join(' | ', $tag_html);
+?>
+      </span>
+    </footer>
+<?php
+    endif; // tags
+?>
   </article><!-- #post-## -->
 </div>

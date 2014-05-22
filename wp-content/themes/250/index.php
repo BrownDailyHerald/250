@@ -4,7 +4,7 @@ get_header();
 
 function render_category($slug = null) {
   if (empty($slug)) return array();
-  $query = new WP_Query( 'category_name='.$slug );
+  $query = new WP_Query( array('category_name' => $slug, 'posts_per_page' => -1) );
   echo '<ul>';
   while ( $query->have_posts() ) {
 	  $query->the_post();

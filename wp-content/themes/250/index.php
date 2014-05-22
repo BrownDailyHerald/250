@@ -39,25 +39,6 @@ body {
     </div>
   </div>
 </div>
-
-<div class="content-container">
-  <div class="archive">
-    <h1> Articles </h1>
-    <h3> Section 1</h3>
-    <ul>
-      <li><a href="#"> Fuck 1 </a> </li>
-      <li><a href="#"> Fuck 2 </a> </li>
-    </ul>
-  </div>
-  <div class="content">
-    <h1> Main Stuff </h1>
-    <ul>
-      <li> <a href="#"> Link 1 </a> </li>
-      <li> <a href="#"> Link 2 </a> </li>
-  </ul>
-  </div>
-</div>
-
 <script type='text/javascript'>
   var low_opc = 0.4;
   var min_width = "5%";

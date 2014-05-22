@@ -25,7 +25,7 @@ if (!empty($custom_author)) trim($custom_author);
       <div class="entry-meta">
         <span class="byline">
           <span class="author vcard">
-            <a class="url fn n" rel="author">By: <?php if (empty($custom_author)) { the_author(); } else { echo $custom_author; } ?></a>
+            <a class="url fn n" rel="author">By <?php if (empty($custom_author)) { the_author(); } else { echo $custom_author; } ?></a>
           </span>
         </span>
       </div>

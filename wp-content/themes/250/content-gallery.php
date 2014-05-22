@@ -7,8 +7,13 @@
  * @since Twenty Fourteen 1.0
  */
 ?>
-
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<header class="banner">
+  <div style="overflow: auto;">
+    <a href="<?php echo get_site_url(); ?>"><?php echo get_bloginfo('name'); ?></a>
+    <div style="float: right; font-size: 12px; margin-top: 10px; margin-right: 20px;">by Joe Stein and Cody Ma</div>
+  </div>
+</header>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> style="margin-top: 30px;">
 
 	<header class="entry-header">
 		<?php

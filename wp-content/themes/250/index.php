@@ -28,7 +28,7 @@ body {
     <div class="title" style="color: #ffffff"><b>The People</b></div>
     <?php render_category('the-people'); ?>
   </div>
-  <div class="category" style="background-color: #3a1e1a; margin: auto;">
+  <div class="category middle" style="background-color: #3a1e1a; margin: auto;">
     <div class="title" style="color: #ffffff"><b>The Place</b></div>
     <?php render_category('the-place'); ?>
   </div>

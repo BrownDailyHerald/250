@@ -8,7 +8,7 @@
  */
 
 get_header(); 
-if ( get_post_format() != 'link' ):
+ob_start();
 ?>
 
 	<div id="primary" class="content-area">
@@ -29,7 +29,7 @@ if ( get_post_format() != 'link' ):
 	</div><!-- #primary -->
 
 <?php
-endif;
+ob_end_flush();
 get_sidebar( 'content' );
 get_sidebar();
 get_footer();

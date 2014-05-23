@@ -5,12 +5,12 @@ get_header();
 function render_category($slug = null) {
   if (empty($slug)) return array();
   $query = new WP_Query( array('category_name' => $slug, 'posts_per_page' => -1) );
-  echo '<ul>';
+  echo '<div class="listing"><ul>';
   while ( $query->have_posts() ) {
 	  $query->the_post();
 	  echo '<li> <a href="'.get_the_permalink().'">' . get_the_title() . '</a></li>';
   }
-  echo '</ul>';
+  echo '</ul></div>';
   return $query;
 }
 
@@ -34,16 +34,14 @@ body {
   </div>
   <div class="category" style="background-color: #dd1e36">
     <div class="title" style="color: #ffffff"><b>The Moment</b></div>
-    <div class="photo">
-      <?php render_category('the-moment'); ?>
-    </div>
+    <?php render_category('the-moment'); ?>
   </div>
 </div>
 <script type='text/javascript'>
   var low_opc = 0.4;
   var min_width = "5%";
   var min_height = $('.category').first().css('height');
-  var exp_height = '600px';
+  var exp_height = '550px';
   $('.category').hover(function() {
     $(this).stop().animate({width: '90%', height: exp_height, opacity: '1.0'});
     $('.category').not($(this)).stop().animate({width: min_width, height: min_height, opacity: low_opc});

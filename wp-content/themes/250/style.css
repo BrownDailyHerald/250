@@ -114,7 +114,7 @@ body {
 .category li {
   font-size: 20px;
 }
-.category a {
+.category.middle a {
   color: white;
 }
 .listing ul {

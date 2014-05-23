@@ -1,6 +1,6 @@
 <?php
 // links redirect via 302 header so don't output anything
-if ( get_post_format() != 'link' ):
+if ( ! ( is_single() && get_post_format() == 'link' ) ):
 ?>
 <!DOCTYPE html>
 <!--[if IE 7]>

@@ -9,7 +9,7 @@ add_filter( 'post_gallery', 'slideshow_gallery', 1, 4 );
 
 function slideshow_gallery($output = '', $atts, $content = false, $tag = false ) {
   if (empty($atts['ids'])) return $output;
-  
+
   $w = get_option('large_size_w');
   $output = '<div class="gallery" style="width: '.$w.'px">'; // clear output
 
@@ -102,6 +102,7 @@ HTML;
   /* end gallery div */
   $output .= '</div>';
 
+  $figcap_pos = in_array('caption-overlay', $atts) ? 'absolute' : 'relative';
   $output .= <<<CSS
 <style type="text/css">
 .gallery-nav .controls {
@@ -164,6 +165,7 @@ figcaption {
   color: white;
   background-color: rgba(0, 0, 0, 0.75);
   font-size: 13px;
+  position: {$figcap_pos};
 }
 figcaption h1 {
   margin-bottom: 5px;

@@ -1,3 +1,7 @@
+<?php
+// links redirect via 302 header so don't output anything
+if ( get_post_format() != 'link' ):
+?>
 <!DOCTYPE html>
 <!--[if IE 7]>
 <html class="ie ie7" <?php language_attributes(); ?>>
@@ -20,3 +24,5 @@
 </head>
 
 <body <?php body_class(); ?>>
+<?php
+endif; // end no output if link

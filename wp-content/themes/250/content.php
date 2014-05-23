@@ -24,7 +24,7 @@ if ( is_single() ): // banner should only show up on its own page
 <div id="main" class="site-main">
   <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <header class="entry-header">
-      <h1 class="entry-title"><?php the_title( ); ?></h1>
+      <h1 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'twofifty' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title( ); ?></a></h1>
       <div class="entry-meta">
         <span class="byline">
           <span class="author vcard">
